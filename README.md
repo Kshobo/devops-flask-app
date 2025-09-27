@@ -1,3 +1,7 @@
 # devops-flask-app
+<<<<<<< HEAD
 N/A
-Here is another string
+=======
+Welcome!
+
+>>>>>>> new_greeting
