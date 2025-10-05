@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
 
       /vagrant/venv/bin/pip install --upgrade pip
       /vagrant/venv/bin/pip install flask
-      /vagrant/venv/bin/flask --app /vagrant/hello run --host=0.0.0.0
+      /vagrant/venv/bin/flask --app /vagrant/hello.py run --host=0.0.0.0
       
       bash /vagrant/setup_flask.sh
     SHELL
