@@ -1,10 +1,11 @@
-FROM python:3
+FROM python:3.13.9-alpine3.22
 
-WORKDIR /usr/src/app
-
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /app
 
 COPY . .
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir flask redis
 
-CMD [ "python", "./app.py" ]
+EXPOSE 5000
+
+CMD ["flask", "--app", "hello", "run", "--host=0.0.0.0"]
