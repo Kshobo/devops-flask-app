@@ -1,11 +1,10 @@
-FROM python:3.13.9-alpine3.22
+FROM python:3.14
 
 WORKDIR /app
 
 COPY . .
-RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir flask redis
 
 EXPOSE 5000
 
-CMD ["flask", "--app", "hello", "run", "--host=0.0.0.0"]
+CMD ["python", "hello.py"]

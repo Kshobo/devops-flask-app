@@ -9,6 +9,7 @@ python3 -m venv venv
 
 source venv/bin/activate
 
-pip install Flask
+pip3 install Flask
 
 flask --app hello run --host=0.0.0.0
+echo "Flask app is running on http://localhost:5000"
